@@ -13,44 +13,17 @@
           </div>
           <div class="col-10">
             <h1 class="col-10 p-5">Willkommen im Vociquiz!</h1>
-
             <div class="container">
                 <div class="row row-cols-2">
+                    {% for vocabulary in vocabularies %}
                     <div class="card m-1" style="width: 18rem;">
                         <div class="card-body">
-                          <h5 class="card-title">Französisch 1</h5>
-                          <p class="card-text">Das sind noch einfache Wörter, aber lernen muss man sie trotzdem!</p>
-                          <a href="#" class="btn btn-primary">Auswählen</a>
+                          <h5 class="card-title">{{ vocabulary.name }}</h5>
+                          <p class="card-text">{{ vocabulary.description }}</p>
+                          <a href="/vocabulary/{{ vocabulary.id }}/" class="btn btn-primary">Auswählen</a>
                         </div>
                     </div>
-                    <div class="card m-1" style="width: 18rem;">
-                        <div class="card-body">
-                          <h5 class="card-title">Französisch 2</h5>
-                          <p class="card-text">Das ist schon super schwer!</p>
-                          <a href="#" class="btn btn-primary">Auswählen</a>
-                        </div>
-                    </div>
-                    <div class="card m-1" style="width: 18rem;">
-                        <div class="card-body">
-                          <h5 class="card-title">Französisch 3</h5>
-                          <p class="card-text">Jetzt ist es eigentlich schon fast hoffnungslos...</p>
-                          <a href="#" class="btn btn-primary">Auswählen</a>
-                        </div>
-                    </div>
-                    <div class="card m-1" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Französisch 4</h5>
-                            <p class="card-text">The struggle is real!</p>
-                            <a href="#" class="btn btn-primary">Auswählen</a>
-                        </div>
-                    </div>
-                    <div class="card m-1" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Französisch 4</h5>
-                            <p class="card-text">The struggle is real!</p>
-                            <a href="#" class="btn btn-primary">Auswählen</a>
-                        </div>
-                    </div>
+                    {% endfor %}
                   </div>
                 </div>
             </div>

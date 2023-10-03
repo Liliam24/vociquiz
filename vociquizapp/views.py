@@ -1,8 +1,11 @@
 from django.shortcuts import render
 
-from django.template import loader
+from .models import Vocabulary
 
 # Create your views here.
 def index(request):
-    context = {}
+    vocabularies = Vocabulary.objects.all()
+    context = {
+        'vocabularies': vocabularies
+    }
     return render(request, 'vociquizapp/index.html', context)
