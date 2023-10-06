@@ -16,3 +16,10 @@ def menu(request, vocabulary_id):
         
     }
     return render(request, 'vociquizapp/menu.html', context)
+
+def vocicard(request, vocabulary_id):
+
+    context = {
+        
+    }
+    return render(request, 'vociquizapp/vocicard.html', context)
