@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 from .models import Vocabulary
 
@@ -13,4 +12,7 @@ def index(request):
 
 def menu(request, vocabulary_id):
 
-    return HttpResponse("Das ist das Menu!")
+    context = {
+        
+    }
+    return render(request, 'vociquizapp/menu.html', context)
